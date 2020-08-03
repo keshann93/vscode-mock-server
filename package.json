@@ -1,9 +1,9 @@
 {
-  "name": "semantic-live",
-  "displayName": "semantic-live",
-  "description": "semantic previewer",
+  "name": "vscode-mock-server",
+  "displayName": "vscode-mock-server",
+  "description": "mock server for open api",
   "publisher": "keshan",
-  "version": "0.12.0",
+  "version": "0.0.1",
   "engines": {
     "vscode": "^1.33.0"
   },
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/keshann93/semantic"
+    "url": "https://github.com/keshann93/vscode-mock-server"
   },
   "icon": "icons/marketplace.png",
   "galleryBanner": {
@@ -27,8 +27,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "semantic.showPanel",
-        "title": "Toggle Semantic panel",
+        "command": "mock.showPanel",
+        "title": "Toggle Mock panel",
         "icon": {
           "dark": "./icons/icon-light.png",
           "light": "./icons/icon-dark.png"
@@ -38,63 +38,15 @@
     "menus": {
       "editor/title": [
         {
-          "when": "resourceLangId == html",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
+          "when": "resourceLangId == yaml",
+          "command": "mock.showPanel",
+          "alt": "mock.showPanel",
           "group": "navigation"
         },
         {
-          "when": "resourceLangId == css",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == scss",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == javascript",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == typescript && isAngularComponent",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == javascriptreact",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == typescriptreact",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == postcss",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == svelte",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
-          "group": "navigation"
-        },
-        {
-          "when": "resourceLangId == vue",
-          "command": "semantic.showPanel",
-          "alt": "semantic.showPanel",
+          "when": "resourceLangId == json",
+          "command": "mock.showPanel",
+          "alt": "mock.showPanel",
           "group": "navigation"
         }
       ]
