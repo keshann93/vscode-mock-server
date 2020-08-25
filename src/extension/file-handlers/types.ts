@@ -320,11 +320,11 @@ export interface FileHandler {
       }
  */
 export interface EditableBlock {
-  selector: string;
-  declarations: Declaration[];
+  pathSelector: string;
+  apiDeclarations: ApiDeclaration[];
 }
 
-export interface Declaration {
+export interface ApiDeclaration {
   type: SupportedMethods;
   operationId: string;
   summary: string;
@@ -335,12 +335,6 @@ export interface ApiResponse {
   code: SupportedResponseCode;
   description: string;
   content: any;
-}
-
-export interface StyleExpressions {
-  name: string;
-  apiPathString: string;
-  location: any;
 }
 
 export interface LocationPosition {
